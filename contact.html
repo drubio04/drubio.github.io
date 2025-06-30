@@ -1,39 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dereck Rubio | Contact</title>
+  <title>Contact | Dereck Rubio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="background-overlay"></div>
-  <header class="fade-in">
-    <h1>Contact</h1>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <h1>Dereck Rubio</h1>
+    <p class="subtitle">Future-Ready Electrical Engineer</p>
   </header>
-  
-<nav>
-  <a href="index.html">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
-  <a href="contact.html">Contact</a>
-</nav>
 
-  <section class="fade-in">
-    <h2>Reach Out</h2>
-    <ul class="contact-links">
-      <li><strong>Email:</strong> <a href="mailto:dirkrubio25@gmail.com">dirkrubio25@gmail.com</a></li>
-      <li><strong>Phone:</strong> <a href="tel:2097243045">(209) 724-3045</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dereck04w" target="_blank">linkedin.com/in/dereckrubio</a></li>
-      <li><strong>Resume:</strong> <a href="assets/resume.pdf" target="_blank">Download Resume</a></li>
-    </ul>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:dirkrubio25@gmail.com">dirkrubio25@gmail.com</a></p>
+    <p>Phone: <a href="tel:2097243045">(209) 724-3045</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/dereck04w" target="_blank">linkedin.com/in/dereckrubio</a></p>
   </section>
-  
-<footer>
-  <p>&copy; 2025 Dereck Rubio</p>
-</footer>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
