@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dereck Rubio | Future-Ready Electrical Engineer</title>
+  <title>Dereck Rubio | About</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
@@ -16,64 +15,33 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
-  <section id="about" class="fade-in">
+  <section class="fade-in">
     <h2>About Me</h2>
-    <p>I’m a rising 4th year Electrical Engineering student at UCLA with a strong passion for hands-on work, particularly in circuitry and embedded systems. When I first entered college, I had no prior experience in engineering. But through relentless effort and a hunger to learn, I’ve developed a broad skill set that not only made me a more capable engineer — it gave me experiences I’ll carry for life. From wiring complex altimeter deployments to debugging real-world hardware challenges, I’ve found a lo...
-  </section>
-
-  <section id="projects" class="fade-in">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Rocket Recovery System</h3>
-      <img src="assets/images/rocket_project.jpg" alt="Rocket project screenshot" />
-      <p>Designed a dual-battery deployment system using EasyMini and RRC3 altimeters for parachute control, with redundancy built in for failure resistance. Resulted in successful launches and recoveries during rocketry competitions.</p>
-    </div>
-    <div class="project">
-      <h3>Gesture-Based Browser Control</h3>
-      <img src="assets/images/gesture_project.jpg" alt="Gesture control screenshot" />
-      <p>Created a browser extension that uses AI and hand-drawn gestures to navigate, close, or scroll tabs. Implemented Naive Bayes classification with real-time feedback and Weka model tuning.</p>
-    </div>
-  </section>
-
-  <section id="resume" class="fade-in">
-    <h2>Resume</h2>
-    <p>Download my resume for a full overview of my coursework, hands-on engineering projects, and technical skills in electrical systems and design.</p>
-    <a href="assets/resume.pdf" class="button" target="_blank">📄 View My Resume</a>
-  </section>
-
-  <section id="contact" class="fade-in">
-    <h2>Contact</h2>
-    <p>I'm always open to opportunities to collaborate, learn, and grow. Feel free to reach out using any of the links below:</p>
-    <ul class="contact-links">
-      <li><strong>Email:</strong> <a href="mailto:dirkrubio25@gmail.com">dirkrubio25@gmail.com</a></li>
-      <li><strong>Phone:</strong> <a href="tel:2097243045">(209) 724-3045</a></li>
-      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/dereck04w" target="_blank">linkedin.com/in/dereckrubio</a></li>
-      <li><strong>Resume:</strong> <a href="assets/resume.pdf" target="_blank">Download Resume</a></li>
-    </ul>
+    <p>
+      I’m a rising fourth-year Electrical Engineering student at UCLA, and my path into this field didn’t follow a traditional trajectory. When I started college, I didn’t have a single technical skill to my name. I didn’t know how to wire a circuit, write a line of code, or navigate an engineering lab. But what I did have was drive. I was curious, persistent, and completely committed to figuring things out for myself, even if I had to start from zero. That mindset became the foundation for everything that followed.
+    </p>
+    <p>
+      Over time, through late nights, hands-on frustration, and small breakthroughs, I found myself learning skills I never imagined I would. I became comfortable with debugging, design iteration, and the entire process of bringing something from idea to implementation. That feeling of building something real with your hands, of watching a project move from concept to completion, is what made me fall in love with engineering. I started to realize that I wasn’t just completing assignments or passing exams. I was growing into the kind of engineer I had always hoped to become—someone who is not only technically capable, but genuinely passionate about the process.
+    </p>
+    <p>
+      One of the things I value most about my experience so far is how diverse it’s been. I’ve explored different corners of the engineering world, from hardware-focused circuitry and embedded systems to interface design and applied machine learning. I’m not afraid to try something new, to pick up a new tool or dive into an unfamiliar concept. That openness has helped me develop a broad skill set and a deep respect for the complexity and beauty of the field. I don’t feel pressure to commit to just one specialty at this point in my journey. I am equally excited by the opportunity to go wide and learn across domains as I am by the idea of going deep and mastering a specific focus. Either direction allows me to do what I love most—learn, build, and improve.
+    </p>
+    <p>
+      Beyond the technical side, I also care deeply about the human side of engineering. I want to encourage others who feel like outsiders or late starters. I know what it feels like to walk into a lab and feel behind. I know what it feels like to look around and question whether you belong. That perspective is exactly why I believe I can make a difference. I want to help create spaces where people feel welcomed and supported in their growth, regardless of where they start. If I can inspire even one person to keep going when they doubt themselves, that matters to me.
+    </p>
+    <p>
+      Everything you see on this site is more than just a summary of my work. It’s a reflection of who I am, what I’ve overcome, and what I hope to contribute to this field moving forward. I am constantly learning, improving, and pushing myself further. And I am excited for whatever comes next.
+    </p>
   </section>
 
   <footer>
     <p>&copy; 2025 Dereck Rubio</p>
   </footer>
-
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const options = { threshold: 0.2 };
-    const observer = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('appear');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-    faders.forEach(fader => observer.observe(fader));
-  </script>
 </body>
 </html>
