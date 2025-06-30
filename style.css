@@ -1,28 +1,63 @@
+/* Base styles */
+body {
+  background: #1e1e1e;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header section */
+.hero-header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom, #1e1e1e 0%, #2a2a2a 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 1rem 0 0.3rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #bbbbbb;
+  margin-top: 0.2rem;
+}
+
 .profile-pic {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  margin-top: 1rem;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.background-overlay {
-  background: url("assets/backgroundpic.jpg") no-repeat center center fixed;
-  background-size: cover;
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  opacity: 0.2;
+/* Section styling */
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 2rem;
 }
 
-.fade-in {
-  animation: fadeIn 1.5s ease-in-out;
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: justify;
 }
