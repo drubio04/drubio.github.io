@@ -1,35 +1,40 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dereck Rubio | Resume</title>
+  <title>Resume | Dereck Rubio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="background-overlay"></div>
-  <header class="fade-in">
-    <h1>Resume</h1>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <h1>Dereck Rubio</h1>
+    <p class="subtitle">Future-Ready Electrical Engineer</p>
   </header>
-  
-<nav>
-  <a href="index.html">About</a>
-  <a href="projects.html">Projects</a>
-  <a href="resume.html">Resume</a>
-  <a href="contact.html">Contact</a>
-</nav>
 
-  <section class="fade-in">
-    <h2>View or Download</h2>
-    <p>Download my resume for a full overview of my coursework, hands-on engineering projects, and technical skills in electrical systems and design.</p>
-    <a href="assets/resume.pdf" class="button" target="_blank">📄 View My Resume</a>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Resume</h2>
+    <p>You can download a PDF version of my resume below.</p>
+    <a href="assets/resume.pdf" target="_blank">Download Resume (PDF)</a>
   </section>
-  
-<footer>
-  <p>&copy; 2025 Dereck Rubio</p>
-</footer>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
