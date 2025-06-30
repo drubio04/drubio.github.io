@@ -12,14 +12,22 @@
   <div class="background-overlay"></div>
 
   <header>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     <h1>Dereck Rubio</h1>
     <p class="subtitle">Future-Ready Electrical Engineer</p>
     <img src="assets/dereckpic.jpg" alt="Photo of Dereck Rubio" class="profile-pic" />
   </header>
 
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
   <section id="about">
     <h2>About Me</h2>
-    <p>
+     <p>
       I am a rising fourth year Electrical Engineering student at UCLA. When I first arrived on campus, I had no prior experience in engineering. I did not know how to code, build a circuit, or even read a schematic. But I brought with me a strong work ethic and a deep curiosity. I committed myself to learning by doing. I taught myself how to wire circuits, debug problems, and explore hardware through trial and error. Over time, I built a strong technical foundation and gained experience across circuits, embedded systems, coding, and user-facing projects. What I enjoy most is bringing ideas to life. Whether it’s soldering by hand or troubleshooting a full prototype, the challenge of making something work excites me.
     </p>
     <p>
@@ -32,5 +40,12 @@
       As I look toward the future, I am seeking an environment where I can continue to work hands-on, learn from experienced engineers, and contribute to meaningful projects that have real-world impact. I value companies that support personal development, encourage collaboration, and challenge their teams to think critically. I am ready to bring my passion, work ethic, and adaptability to the next chapter of my journey, and I am eager to learn from those around me while making a difference.
     </p>
   </section>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
