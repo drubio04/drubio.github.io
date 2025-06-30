@@ -1,5 +1,3 @@
-
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dereck Rubio | Future-Ready Electrical Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
   <div class="background-overlay"></div>
-  <header>
+  <header class="fade-in">
     <h1>Dereck Rubio</h1>
     <p>"Be the best version of yourself in anything that you do. You don't have to live anybody else's story." – Stephen Curry</p>
   </header>
@@ -22,12 +21,12 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>I’m a rising 4th year Electrical Engineering student at UCLA with a strong passion for hands-on work, particularly in circuitry and embedded systems. When I first entered college, I had no prior experience in engineering. But through relentless effort and a hunger to learn, I’ve developed a broad skill set that not only made me a more capable engineer — it gave me experiences I’ll carry for life. From wiring complex altimeter deployments to debugging real-world hardware challenges, I’ve found a love for designing, building, and problem-solving that I want to share with others. I hope to inspire younger generations to dive into engineering and gain as much from it as I have.</p>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="project">
       <h3>Rocket Recovery System</h3>
@@ -41,13 +40,13 @@
     </div>
   </section>
 
-  <section id="resume">
+  <section id="resume" class="fade-in">
     <h2>Resume</h2>
     <p>Download my resume for a full overview of my coursework, hands-on engineering projects, and technical skills in electrical systems and design.</p>
     <a href="assets/resume.pdf" class="button" target="_blank">📄 View My Resume</a>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="fade-in">
     <h2>Contact</h2>
     <p>I'm always open to opportunities to collaborate, learn, and grow. Feel free to reach out using any of the links below:</p>
     <ul class="contact-links">
@@ -61,5 +60,19 @@
   <footer>
     <p>&copy; 2025 Dereck Rubio</p>
   </footer>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const options = { threshold: 0.2 };
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+    faders.forEach(fader => observer.observe(fader));
+  </script>
 </body>
 </html>
