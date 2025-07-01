@@ -194,28 +194,18 @@ nav a:hover {
   margin-top: 0.5rem;
   color: #f0f0f0;
 }
+/* Email dropdown styling (reuses UCLA Blue resume-download style) */
 .email-dropdown {
   position: relative;
   display: inline-block;
   margin: 1rem;
 }
 
-.email-dropdown .contact-btn {
-  background-color: #2774AE;
-  color: black;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
+.contact-email-btn {
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
 }
 
-.email-dropdown .contact-btn:hover {
-  background-color: #1d5d8f;
-}
-
+/* Dropdown menu */
 .email-options {
   display: none;
   position: absolute;
@@ -241,7 +231,7 @@ nav a:hover {
   background-color: #eee;
 }
 
-/* Show options on button click */
+/* Show options when active */
 .email-dropdown.show .email-options {
   display: block;
 }
