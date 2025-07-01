@@ -66,7 +66,10 @@
       const popup = document.getElementById('phone-popup');
       popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
     }
-
+ function showPhonePopup() {
+    const popup = document.getElementById("phonePopup");
+    popup.style.display = popup.style.display === "block" ? "none" : "block";
+  }
     document.addEventListener('click', function(event) {
       if (!event.target.closest('.contact-dropdown')) {
         document.getElementById('email-options').style.display = 'none';
