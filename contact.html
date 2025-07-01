@@ -6,10 +6,10 @@
   <title>Contact | Dereck Rubio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="background-overlay"></div>
+
   <header>
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
     <h1>Dereck Rubio</h1>
@@ -23,61 +23,51 @@
     <a href="contact.html">Contact</a>
   </nav>
 
- <section class="resume-section">
-  <h2>Contact Me</h2>
-  <p>If you'd like to connect, feel free to reach out through any of the following:</p>
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <p>If you'd like to connect, feel free to reach out through any of the following:</p>
 
-  <div class="resume-download">
-    <a href="mailto:dirkrubio25@gmail.com">📧 Email </a>
-  </div>
+    <div class="contact-buttons">
 
-  <div class="resume-download">
-    <a href="tel:+12097243045">📞 Phone</a>
-  </div>
+      <!-- EMAIL WITH DROPDOWN -->
+      <div class="email-dropdown">
+        <a class="resume-download contact-email-btn">📧 Email</a>
+        <div class="email-options">
+          <a href="https://mail.google.com/mail/?view=cm&to=dirkrubio25@gmail.com" target="_blank">Gmail</a>
+          <a href="https://outlook.office.com/mail/deeplink/compose?to=dirkrubio25@gmail.com" target="_blank">Outlook</a>
+          <a href="https://compose.mail.yahoo.com/?to=dirkrubio25@gmail.com" target="_blank">Yahoo</a>
+        </div>
+      </div>
 
-  <div class="resume-download">
-    <a href="https://www.linkedin.com/in/dereckrubio" target="_blank">🔗 LinkedIn</a>
-  </div>
-   <div class="contact-buttons">
-  <!-- EMAIL BUTTON DROPDOWN -->
- <div class="email-dropdown">
-  <a class="resume-download contact-email-btn">Email Me</a>
-  <div class="email-options">
-    <a href="https://mail.google.com/mail/?view=cm&to=dirkrubio25@gmail.com" target="_blank">Gmail</a>
-    <a href="https://outlook.office.com/mail/deeplink/compose?to=dirkrubio25@gmail.com" target="_blank">Outlook</a>
-    <a href="https://compose.mail.yahoo.com/?to=dirkrubio25@gmail.com" target="_blank">Yahoo</a>
-  </div>
-</div>
+      <!-- PHONE -->
+      <a href="tel:2097243045" class="resume-download">📞 Phone</a>
 
-  <!-- PHONE & LINKEDIN BUTTONS (already implemented, shown for clarity) -->
-  <a href="tel:2097243045" class="contact-btn">Call: (209) 724-3045</a>
-  <a href="https://www.linkedin.com/in/dereckrubio" target="_blank" class="resume-download">View LinkedIn</a>
-</div>
-</section>
+      <!-- LINKEDIN -->
+      <a href="https://www.linkedin.com/in/dereckrubio" target="_blank" class="resume-download">🔗 LinkedIn</a>
 
-
+    </div>
+  </section>
 
   <script>
     function toggleMenu() {
       const nav = document.getElementById('navbar');
       nav.classList.toggle('active');
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const emailDropdown = document.querySelector('.email-dropdown');
+      const trigger = emailDropdown.querySelector('.contact-email-btn');
+
+      trigger.addEventListener('click', function () {
+        emailDropdown.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!emailDropdown.contains(e.target)) {
+          emailDropdown.classList.remove('show');
+        }
+      });
+    });
   </script>
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const emailDropdown = document.querySelector('.email-dropdown');
-    const button = emailDropdown.querySelector('.contact-btn');
-
-    button.addEventListener('click', function () {
-      emailDropdown.classList.toggle('show');
-    });
-
-    document.addEventListener('click', function (e) {
-      if (!emailDropdown.contains(e.target)) {
-        emailDropdown.classList.remove('show');
-      }
-    });
-  });
-</script>
 </body>
 </html>
