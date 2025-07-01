@@ -154,26 +154,3 @@ header, nav, section, footer {
   cursor: pointer;
   color: white;
 }
-
-/* Dark mode */
-body.dark-mode {
-  background-color: #1c1c1c;
-  color: #f1f1f1;
-}
-
-body.dark-mode header {
-  background-color: #111;
-}
-
-body.dark-mode nav {
-  background-color: #222;
-}
-
-body.dark-mode section {
-  background-color: #2a2a2a;
-  color: #f1f1f1;
-}
-
-body.dark-mode footer {
-  background-color: #111;
-}
