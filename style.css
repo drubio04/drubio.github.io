@@ -181,6 +181,7 @@ nav a:hover {
 
 .contact-dropdown {
   position: relative;
+  display: inline-block;
 }
 
 .email-options,
@@ -203,7 +204,7 @@ nav a:hover {
 .email-options a {
   display: block;
   color: white;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
   text-decoration: none;
   font-weight: bold;
 }
@@ -228,4 +229,17 @@ nav a:hover {
     width: 90%;
     font-size: 1rem;
   }
+}
+.email-options {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #2774AE;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
