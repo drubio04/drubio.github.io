@@ -1,4 +1,4 @@
-/* Base styles */
+/* Background and Typography */
 body {
   background: url("assets/backgroundpic.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -15,14 +15,15 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
   z-index: -1;
 }
 
-/* Header styling */
+/* Header and Title */
 header {
   text-align: center;
   padding: 3rem 1rem 1rem;
+  position: relative;
 }
 
 h1 {
@@ -43,7 +44,7 @@ h1 {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Profile pic (only on home) */
+/* Profile Picture (Home Page Only) */
 .profile-pic {
   width: 160px;
   height: 160px;
@@ -53,33 +54,34 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Headings */
+/* Section Content */
+section {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.85); /* Stronger background for contrast */
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  color: #f2f2f2; /* Brighter text color */
+}
+
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
 }
 
-/* Sections */
-section {
-  max-width: 800px;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
-  margin: 2rem auto;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Paragraphs */
 p {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   text-align: justify;
+  color: #e0e0e0;
 }
 
-/* Hamburger menu */
+/* Navigation Menu Icon */
 .menu-icon {
   position: absolute;
   top: 1rem;
@@ -90,7 +92,7 @@ p {
   z-index: 10;
 }
 
-/* Nav styling */
+/* Nav Bar */
 nav {
   display: none;
   flex-direction: column;
@@ -118,10 +120,10 @@ nav a {
 }
 
 nav a:hover {
-  color: #FFD700; /* UCLA Gold hover */
+  color: #FFD700; /* Gold hover effect */
 }
 
-/* Resume page */
+/* Resume Section Styling */
 .resume-section {
   text-align: center;
   padding: 2rem;
@@ -141,13 +143,4 @@ nav a:hover {
 
 .resume-download a:hover {
   background-color: #1d5d8f;
-}
-
-/* Embedded PDF iframe */
-iframe {
-  width: 100%;
-  height: 600px;
-  border: none;
-  margin-top: 2rem;
-  border-radius: 10px;
 }
