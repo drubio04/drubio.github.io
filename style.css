@@ -1,12 +1,12 @@
-/* Background and Typography */
+/* === GLOBAL STYLES === */
 body {
   background: url("assets/backgroundpic.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: white;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  color: white;
 }
 
 .background-overlay {
@@ -15,15 +15,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75); /* Darker overlay for readability */
+  background: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
-/* Header and Title */
+/* === HEADER === */
 header {
   text-align: center;
   padding: 3rem 1rem 1rem;
-  position: relative;
 }
 
 h1 {
@@ -32,7 +31,7 @@ h1 {
   color: #2774AE; /* UCLA Blue */
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 6px (0, 0, 0, 0.6);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .subtitle {
@@ -41,10 +40,10 @@ h1 {
   color: #FFFFFF;
   margin-bottom: 1.5rem;
   font-family: 'Open Sans', sans-serif;
-  text-shadow: 1px 1px 4px (0, 0, 0, 0.4);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Profile Picture (Home Page Only) */
+/* === PROFILE PICTURE (HOME ONLY) === */
 .profile-pic {
   width: 160px;
   height: 160px;
@@ -54,23 +53,22 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Section Content */
+/* === SECTION CONTAINER === */
 section {
   max-width: 800px;
-  background: (0, 0, 0, 0.85); /* Stronger background for contrast */
+  background: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 15px (0, 0, 0, 0.4);
-  color: #f2f2f2; /* Brighter text color */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
+/* === TYPOGRAPHY === */
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
 }
 
 p {
@@ -78,10 +76,9 @@ p {
   line-height: 1.8;
   margin-bottom: 1.5rem;
   text-align: justify;
-  color: #e0e0e0;
 }
 
-/* Navigation Menu Icon */
+/* === MENU ICON === */
 .menu-icon {
   position: absolute;
   top: 1rem;
@@ -92,12 +89,12 @@ p {
   z-index: 10;
 }
 
-/* Nav Bar */
+/* === NAVIGATION BAR === */
 nav {
   display: none;
   flex-direction: column;
   align-items: center;
-  background-color: (0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
   top: 70px;
   right: 20px;
@@ -120,10 +117,10 @@ nav a {
 }
 
 nav a:hover {
-  color: #FFD700; /* Gold hover effect */
+  color: #FFD700; /* UCLA Gold */
 }
 
-/* Resume Section Styling */
+/* === RESUME BUTTON === */
 .resume-section {
   text-align: center;
   padding: 2rem;
@@ -144,219 +141,8 @@ nav a:hover {
 .resume-download a:hover {
   background-color: #1d5d8f;
 }
-.contact-info {
-  margin: 1.5rem 0;
-  font-size: 1.1rem;
-}
 
-.contact-info a {
-  color: #FFD700;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-.contact-boxes {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  align-items: center;
-}
-
-.contact-box {
-  display: block;
-  width: 80%;
-  max-width: 400px;
-  padding: 1.5rem;
-  background-color: #2774AE; /* UCLA Blue */
-  color: black;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 1.2rem;
-  box-shadow: 0 0 15px (0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.contact-box:hover {
-  background-color: #1d5d8f;
-  color: white;
-  transform: scale(1.03);
-}
-
-.contact-box span {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: normal;
-  margin-top: 0.5rem;
-  color: #f0f0f0;
-}
-/* Email dropdown styling (reuses UCLA Blue resume-download style) */
-.email-dropdown {
-  position: relative;
-  display: inline-block;
-  margin: 1rem;
-}
-
-.contact-email-btn {
-  cursor: pointer;
-}
-
-/* Dropdown menu */
-.email-options {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  z-index: 99;
-  min-width: 160px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-.email-options a {
-  display: block;
-  color: black;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.email-options a:hover {
-  background-color: #eee;
-}
-
-/* Show options when active */
-.email-dropdown.show .email-options {
-  display: block;
-}
-/* Popup overlay */
-.popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 100;
-}
-
-/* Popup box */
-.popup-box {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 300px;
-  width: 80%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.popup-box .phone-number {
-  font-size: 1.3rem;
-  color: #333;
-  font-weight: bold;
-}
-
-.close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1.2rem;
-  font-size: 1.5rem;
-  color: #aaa;
-  cursor: pointer;
-}
-.contact-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.contact-buttons button {
-  background-color: #2774AE; /* UCLA Blue */
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-buttons button:hover {
-  background-color: #1d5d8f;
-}
-
-.contact-buttons button i {
-  margin-right: 0.5rem;
-}
-.contact-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.contact-buttons button {
-  background-color: #2774AE; /* UCLA Blue */
-  color: white;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 240px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-buttons button:hover {
-  background-color: #1d5d8f;
-}
-
-.contact-buttons button i {
-  margin-right: 0.5rem;
-}
-
-.email-options,
-.phone-popup {
-  display: none;
-  margin-top: 0.5rem;
-  background-color: #1d5d8f;
-  padding: 0.75rem;
-  border-radius: 6px;
-  width: 240px;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-}
-
-.email-options a {
-  display: inline-block;
-  color: white;
-  margin: 0 0.5rem;
-  text-decoration: none;
-  font-weight: bold;
-}
+/* === CONTACT PAGE === */
 .contact-section {
   text-align: center;
   padding: 2rem;
@@ -387,6 +173,16 @@ nav a:hover {
   background-color: #1d5d8f;
 }
 
+.contact-buttons a button {
+  background-color: #2774AE;
+  color: white;
+  font-weight: bold;
+}
+
+.contact-dropdown {
+  position: relative;
+}
+
 .email-options,
 .phone-popup {
   display: none;
@@ -397,6 +193,11 @@ nav a:hover {
   text-align: center;
   color: white;
   font-weight: bold;
+  position: absolute;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
 .email-options a {
@@ -411,6 +212,20 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.contact-dropdown {
-  position: relative;
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contact-buttons button,
+  .resume-download a {
+    width: 90%;
+    font-size: 1rem;
+  }
 }
