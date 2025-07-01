@@ -28,27 +28,30 @@
     <p>If you'd like to connect, feel free to reach out through any of the following:</p>
 
     <div class="contact-buttons">
-      <!-- Email Button -->
-      <!-- Email Button -->
-<button onclick="toggleEmailOptions()">📧 Email</button>
-<div id="email-options" class="email-options">
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dirkrubio25@gmail.com" target="_blank">Gmail</a>
-  <a href="https://outlook.live.com/owa/?path=/mail/action/compose&to=dirkrubio25@gmail.com" target="_blank">Outlook</a>
-  <a href="http://compose.mail.yahoo.com/?to=dirkrubio25@gmail.com" target="_blank">Yahoo</a>
-</div>
+      <!-- Email Button + Dropdown -->
+      <div class="contact-dropdown">
+        <button onclick="toggleEmailOptions()">📧 Email</button>
+        <div id="email-options" class="email-options">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dirkrubio25@gmail.com" target="_blank">Gmail</a>
+          <a href="https://outlook.live.com/owa/?path=/mail/action/compose&to=dirkrubio25@gmail.com" target="_blank">Outlook</a>
+          <a href="https://compose.mail.yahoo.com/?to=dirkrubio25@gmail.com" target="_blank">Yahoo</a>
+        </div>
+      </div>
 
-      <!-- Phone Button -->
-      <button onclick="togglePhonePopup()">📞 Phone</button>
-      <div id="phone-popup" class="phone-popup">(209) 724-3045</div>
+      <!-- Phone Button + Popup -->
+      <div class="contact-dropdown">
+        <button onclick="togglePhonePopup()">📞 Phone</button>
+        <div id="phone-popup" class="phone-popup">(209) 724-3045</div>
+      </div>
 
-      <!-- LinkedIn Button -->
+      <!-- LinkedIn (unchanged) -->
       <a href="https://www.linkedin.com/in/dereck04w" target="_blank">
         <button>🔗 LinkedIn</button>
       </a>
     </div>
   </section>
 
- <script>
+  <script>
     function toggleMenu() {
       const nav = document.getElementById('navbar');
       nav.classList.toggle('active');
@@ -64,13 +67,10 @@
       popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
     }
 
-    // Optional: Hide open menus when clicking outside
     document.addEventListener('click', function(event) {
-      const emailBox = document.getElementById('email-options');
-      const phoneBox = document.getElementById('phone-popup');
       if (!event.target.closest('.contact-dropdown')) {
-        emailBox.style.display = 'none';
-        phoneBox.style.display = 'none';
+        document.getElementById('email-options').style.display = 'none';
+        document.getElementById('phone-popup').style.display = 'none';
       }
     });
   </script>
