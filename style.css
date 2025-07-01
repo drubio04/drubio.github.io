@@ -203,16 +203,21 @@ nav a:hover {
 
 .email-options a {
   display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0.2rem 0;
+  text-align: center;
+  background-color: #2774AE;
   color: white;
-  margin: 0.5rem 0;
-  text-decoration: none;
   font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .email-options a:hover {
-  text-decoration: underline;
+  background-color: #1e5b8c;
 }
-
 /* === RESPONSIVE ADJUSTMENTS === */
 @media (max-width: 600px) {
   h1 {
@@ -232,14 +237,14 @@ nav a:hover {
 }
 .email-options {
   display: none;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #2774AE;
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 100;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  min-width: 200px;
+  z-index: 10;
 }
