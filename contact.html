@@ -49,28 +49,30 @@
   </section>
 
  <script>
-  function toggleMenu() {
-    const nav = document.getElementById('navbar');
-    nav.classList.toggle('active');
-  }
-
-  function toggleEmailOptions() {
-    const options = document.getElementById('email-options');
-    if (options.style.display === 'block') {
-      options.style.display = 'none';
-    } else {
-      options.style.display = 'block';
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
     }
-  }
 
-  function togglePhonePopup() {
-    const popup = document.getElementById('phone-popup');
-    if (popup.style.display === 'block') {
-      popup.style.display = 'none';
-    } else {
-      popup.style.display = 'block';
+    function toggleEmailOptions() {
+      const options = document.getElementById('email-options');
+      options.style.display = options.style.display === 'block' ? 'none' : 'block';
     }
-  }
-</script>
+
+    function togglePhonePopup() {
+      const popup = document.getElementById('phone-popup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Optional: Hide open menus when clicking outside
+    document.addEventListener('click', function(event) {
+      const emailBox = document.getElementById('email-options');
+      const phoneBox = document.getElementById('phone-popup');
+      if (!event.target.closest('.contact-dropdown')) {
+        emailBox.style.display = 'none';
+        phoneBox.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
