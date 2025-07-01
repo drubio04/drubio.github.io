@@ -63,5 +63,21 @@
       nav.classList.toggle('active');
     }
   </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const emailDropdown = document.querySelector('.email-dropdown');
+    const button = emailDropdown.querySelector('.contact-btn');
+
+    button.addEventListener('click', function () {
+      emailDropdown.classList.toggle('show');
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!emailDropdown.contains(e.target)) {
+        emailDropdown.classList.remove('show');
+      }
+    });
+  });
+</script>
 </body>
 </html>
