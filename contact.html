@@ -57,11 +57,10 @@
       nav.classList.toggle('active');
     }
 
-    function toggleEmailOptions() {
-      const options = document.getElementById('email-options');
-      options.style.display = options.style.display === 'block' ? 'none' : 'block';
-    }
-
+   function toggleEmailOptions() {
+    const emailOptions = document.getElementById("emailOptions");
+    emailOptions.style.display = emailOptions.style.display === "flex" ? "none" : "flex";
+  }
     function togglePhonePopup() {
       const popup = document.getElementById('phone-popup');
       popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
