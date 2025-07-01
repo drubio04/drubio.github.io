@@ -40,7 +40,17 @@
       </div>
 
       <!-- PHONE -->
-      <a href="tel:2097243045" class="resume-download">📞 Phone</a>
+     <button class="contact-btn" onclick="showPhonePopup()">
+  📞 Phone
+</button>
+
+<!-- Phone Popup -->
+<div id="phone-popup" class="popup-overlay" onclick="hidePhonePopup()">
+  <div class="popup-box" onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="hidePhonePopup()">&times;</span>
+    <p class="phone-number">(209) 724-3045</p>
+  </div>
+</div>
 
       <!-- LINKEDIN -->
       <a href="https://www.linkedin.com/in/dereckrubio" target="_blank" class="resume-download">🔗 LinkedIn</a>
@@ -69,5 +79,14 @@
       });
     });
   </script>
+  <script>
+  function showPhonePopup() {
+    document.getElementById('phone-popup').style.display = 'flex';
+  }
+
+  function hidePhonePopup() {
+    document.getElementById('phone-popup').style.display = 'none';
+  }
+</script>
 </body>
 </html>
