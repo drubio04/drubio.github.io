@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | Dereck Rubio</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="background-overlay"></div>
@@ -28,33 +28,22 @@
     <p>If you'd like to connect, feel free to reach out through any of the following:</p>
 
     <div class="contact-buttons">
-
-      <!-- EMAIL WITH DROPDOWN -->
-      <div class="email-dropdown">
-        <a class="resume-download contact-email-btn">📧 Email</a>
-        <div class="email-options">
-          <a href="https://mail.google.com/mail/?view=cm&to=dirkrubio25@gmail.com" target="_blank">Gmail</a>
-          <a href="https://outlook.office.com/mail/deeplink/compose?to=dirkrubio25@gmail.com" target="_blank">Outlook</a>
-          <a href="https://compose.mail.yahoo.com/?to=dirkrubio25@gmail.com" target="_blank">Yahoo</a>
-        </div>
+      <!-- Email Button -->
+      <button onclick="toggleEmailOptions()"><i>📧</i> Email</button>
+      <div id="email-options" class="email-options">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dirkrubio25@gmail.com" target="_blank">Gmail</a>
+        <a href="https://outlook.live.com/owa/?path=/mail/action/compose&to=dirkrubio25@gmail.com" target="_blank">Outlook</a>
+        <a href="http://compose.mail.yahoo.com/?to=dirkrubio25@gmail.com" target="_blank">Yahoo</a>
       </div>
 
-      <!-- PHONE -->
-     <button class="contact-btn" onclick="showPhonePopup()">
-  📞 Phone
-</button>
+      <!-- Phone Button -->
+      <button onclick="togglePhonePopup()"><i>📞</i> Phone</button>
+      <div id="phone-popup" class="phone-popup">(209) 724-3045</div>
 
-<!-- Phone Popup -->
-<div id="phone-popup" class="popup-overlay" onclick="hidePhonePopup()">
-  <div class="popup-box" onclick="event.stopPropagation()">
-    <span class="close-btn" onclick="hidePhonePopup()">&times;</span>
-    <p class="phone-number">(209) 724-3045</p>
-  </div>
-</div>
-
-      <!-- LINKEDIN -->
-      <a href="https://www.linkedin.com/in/dereckrubio" target="_blank" class="resume-download">🔗 LinkedIn</a>
-
+      <!-- LinkedIn Button -->
+      <a href="https://www.linkedin.com/in/your-linkedin-here" target="_blank">
+        <button><i>🔗</i> LinkedIn</button>
+      </a>
     </div>
   </section>
 
@@ -64,29 +53,15 @@
       nav.classList.toggle('active');
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const emailDropdown = document.querySelector('.email-dropdown');
-      const trigger = emailDropdown.querySelector('.contact-email-btn');
+    function toggleEmailOptions() {
+      const options = document.getElementById('email-options');
+      options.style.display = options.style.display === 'block' ? 'none' : 'block';
+    }
 
-      trigger.addEventListener('click', function () {
-        emailDropdown.classList.toggle('show');
-      });
-
-      document.addEventListener('click', function (e) {
-        if (!emailDropdown.contains(e.target)) {
-          emailDropdown.classList.remove('show');
-        }
-      });
-    });
+    function togglePhonePopup() {
+      const popup = document.getElementById('phone-popup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
   </script>
-  <script>
-  function showPhonePopup() {
-    document.getElementById('phone-popup').style.display = 'flex';
-  }
-
-  function hidePhonePopup() {
-    document.getElementById('phone-popup').style.display = 'none';
-  }
-</script>
 </body>
 </html>
